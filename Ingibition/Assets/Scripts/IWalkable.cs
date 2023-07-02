@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Player
+public interface IWalkable
 {
-    public interface IWalkable
-    {
-        void Move(Vector2 dir);
-    }
+    void Move(Vector2 dir);
 }
