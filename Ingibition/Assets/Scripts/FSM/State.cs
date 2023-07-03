@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace FSM
 {
-    [CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
+    [CreateAssetMenu(fileName = "State", menuName = "FSM/State", order = 0)]
     public sealed class State : BaseState
     {
         public List<Activity> activities = new();

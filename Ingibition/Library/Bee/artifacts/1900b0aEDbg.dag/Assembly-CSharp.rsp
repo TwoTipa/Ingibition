@@ -390,8 +390,6 @@
 "Assets/Scripts/IInteractable.cs"
 "Assets/Scripts/Interact/Interactable.cs"
 "Assets/Scripts/Interact/InteractTalk.cs"
-"Assets/Scripts/Interface/InterfaceEnergy.cs"
-"Assets/Scripts/Interface/InterfaceInteraction.cs"
 "Assets/Scripts/IWalkable.cs"
 "Assets/Scripts/NPC/NPCDialog.cs"
 "Assets/Scripts/Player/PlayerController.cs"
@@ -400,6 +398,8 @@
 "Assets/Scripts/Player/PlayerEnergyRegen.cs"
 "Assets/Scripts/Player/PlayerInteraction.cs"
 "Assets/Scripts/Player/PlayerMove.cs"
+"Assets/Scripts/Ui/UiEnergy.cs"
+"Assets/Scripts/Ui/UiInteraction.cs"
 -langversion:9.0
 
 /deterministic

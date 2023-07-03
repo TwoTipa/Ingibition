@@ -6,8 +6,8 @@ namespace FSM
     public sealed class Transition : ScriptableObject
     {
         public Decision  decision;
-        public BaseState TrueState;
-        public BaseState FalseState;
+        public BaseState trueState;
+        public BaseState falseState;
  
         public void Execute(BaseStateMachine stateMachine)
         {

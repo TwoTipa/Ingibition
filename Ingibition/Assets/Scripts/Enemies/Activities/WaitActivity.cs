@@ -2,7 +2,7 @@
 
 namespace Enemies.Activities
 {
-    [CreateAssetMenu(fileName = "FILENAME", menuName = "AI/WaitActivity")]
+    [CreateAssetMenu(fileName = "WaitActivity", menuName = "AI/WaitActivity")]
     public class WaitActivity : ScriptableObject
     {
         

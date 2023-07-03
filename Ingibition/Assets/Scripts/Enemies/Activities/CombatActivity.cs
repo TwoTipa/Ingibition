@@ -2,7 +2,7 @@
 
 namespace Enemies.Activities
 {
-    [CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
+    [CreateAssetMenu(fileName = "CombatActivity", menuName = "AI/CombatActivity", order = 0)]
     public class CombatActivity : ScriptableObject
     {
         
