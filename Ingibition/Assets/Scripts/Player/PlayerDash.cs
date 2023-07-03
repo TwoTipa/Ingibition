@@ -8,6 +8,7 @@ namespace Player
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerDash : MonoBehaviour
     {
+        [SerializeField] private float dashPrice;
         public AnimationCurve jumpCurve; // Кривая анимации для плавного перемещения
         
         [SerializeField] private float dashDistance;
@@ -23,9 +24,10 @@ namespace Player
             _rigidbody = GetComponent<Rigidbody2D>();
         }
 
-        public bool TryDash(Vector2 dir)
+        public float TryDash(Vector2 dir)
         {
-            if(_jumpTimer > 0) return false;
+            if(_jumpTimer > 0) return 0;
+            if (dir.magnitude == 0) dir = Vector2.down;
             _initialPosition = transform.position;
             _targetPosition = _initialPosition + dir * dashDistance;
             _jumpTimer = duration;
@@ -44,7 +46,7 @@ namespace Player
                     _disposable.Clear();
                 }
             }).AddTo(_disposable);
-            return true;
+            return dashPrice;
         }
     }
 }
