@@ -11,7 +11,12 @@ namespace FSM
  
         public void Execute(BaseStateMachine stateMachine)
         {
-            //...
+            if (decision)
+            {
+                stateMachine.CurrentState.Exit(stateMachine);
+                stateMachine.CurrentState = trueState;
+                stateMachine.CurrentState.Enter(stateMachine);
+            }
         }
     }
 }

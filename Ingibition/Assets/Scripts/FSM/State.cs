@@ -25,6 +25,10 @@ namespace FSM
             {
                 activity.Execute(machine);
             }
+            foreach (var transition in transitions)
+            {
+                transition.Execute(machine);
+            }
         }
 
         public override void Exit(BaseStateMachine machine)

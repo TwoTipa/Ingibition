@@ -6,7 +6,6 @@ namespace FSM
     {
         public virtual void Enter(BaseStateMachine machine)
         {
-            Debug.Log($"{this} Enter");
         }
         public virtual void Execute(BaseStateMachine machine)
         {
@@ -14,7 +13,6 @@ namespace FSM
         }
         public virtual void Exit(BaseStateMachine machine)
         {
-            Debug.Log($"{this} Exit");
         }
     }
 }
