@@ -1,11 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerEnergy : MonoBehaviour
 {
     public delegate void OnEnergyChanged(float cur, float max);
-    public OnEnergyChanged onEnergyChanged;
+    public event OnEnergyChanged onEnergyChanged;
 
     [SerializeField] private float currentEnergy;
     [SerializeField] private float maxEnergy;
@@ -16,14 +18,15 @@ public class PlayerEnergy : MonoBehaviour
         if (currentEnergy>maxEnergy)
         {
             currentEnergy = maxEnergy;
-            onEnergyChanged.Invoke(currentEnergy, maxEnergy);
+            onEnergyChanged?.Invoke(currentEnergy, maxEnergy);
             return false;
         }
         else
         {
-            onEnergyChanged.Invoke(currentEnergy, maxEnergy);
+            onEnergyChanged?.Invoke(currentEnergy, maxEnergy);
             return true;
         }
+
     }
 
     public bool ConsumeEnergy(float count)
@@ -35,7 +38,7 @@ public class PlayerEnergy : MonoBehaviour
         else
         {
             currentEnergy-= count;
-            onEnergyChanged.Invoke(currentEnergy, maxEnergy);
+            onEnergyChanged?.Invoke(currentEnergy, maxEnergy);
             return true;
         }
     }
@@ -43,7 +46,13 @@ public class PlayerEnergy : MonoBehaviour
     public void AddMaxEnergy(float count)
     {
         maxEnergy += count;
-        onEnergyChanged.Invoke(currentEnergy, maxEnergy);
+        onEnergyChanged?.Invoke(currentEnergy, maxEnergy);
+    }
+    
+    public void ConsumeMaxEnergy(float count)
+    {
+        maxEnergy -= count;
+        onEnergyChanged?.Invoke(currentEnergy, maxEnergy);
     }
 
     public void SetMaxEnergy(float count)
@@ -53,7 +62,7 @@ public class PlayerEnergy : MonoBehaviour
         {
             currentEnergy = maxEnergy;
         }
-        onEnergyChanged.Invoke(currentEnergy, maxEnergy);
+        onEnergyChanged?.Invoke(currentEnergy, maxEnergy);
     }
 
     public void SetEnergy(float count)
@@ -63,6 +72,6 @@ public class PlayerEnergy : MonoBehaviour
         {
             currentEnergy = maxEnergy;
         }
-        onEnergyChanged.Invoke(currentEnergy, maxEnergy);
+        onEnergyChanged?.Invoke(currentEnergy, maxEnergy);
     }
 }

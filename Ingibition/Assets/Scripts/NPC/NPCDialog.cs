@@ -16,10 +16,10 @@ public class NPCDialog : MonoBehaviour
             switch (dialogType)
             {
                 case DialogShowType.random:
-                    DialogSystem._inst.CreateDialog(dialogList[Random.Range(0, dialogList.Count)], transform.position + dialogOffset, transform);
+                    DialogSystem.Inst.CreateDialog(dialogList[Random.Range(0, dialogList.Count)], transform.position + dialogOffset, transform);
                     break;
                 case DialogShowType.linear:
-                    DialogSystem._inst.CreateDialog(dialogList[currentDialog], transform.position + dialogOffset, transform);
+                    DialogSystem.Inst.CreateDialog(dialogList[currentDialog], transform.position + dialogOffset, transform);
                     currentDialog++;
                     break;
             }
@@ -28,13 +28,13 @@ public class NPCDialog : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        // Устанавливаем цвет для гизмо
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         Gizmos.color = UnityEngine.Color.green;
 
-        // Вычисляем позицию центра объекта
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         Vector3 position = transform.position + dialogOffset;
 
-        // Рисуем квадрат в сцене редактора
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         Gizmos.DrawWireCube(position, new Vector3(5, 1, 0f));
     }
 }

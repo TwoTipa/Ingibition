@@ -9,17 +9,17 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private DialogWindowPrefab dialogWindowPrefab;
     private DialogWindowPrefab dWin;
 
-    public static DialogSystem _inst;
+    public static DialogSystem Inst;
 
     private void Awake()
     {
-        if (_inst==null)
+        if (Inst==null)
         {
-            _inst = this;
+            Inst = this;
         }
         else
         {
-            _inst = null;
+            Inst = null;
         }
     }
 
