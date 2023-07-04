@@ -12,6 +12,7 @@ namespace FSM
         public override void Enter(BaseStateMachine machine)
         {
             base.Enter(machine);
+            Debug.Log("Вошёл в " + machine.CurrentState);
             foreach (var activity in activities)
             {
                 activity.Enter(machine);
@@ -21,6 +22,7 @@ namespace FSM
         public override void Execute(BaseStateMachine machine)
         {
             base.Execute(machine);
+            Debug.Log("Обновляю " + machine.CurrentState);
             foreach (var activity in activities)
             {
                 activity.Execute(machine);
@@ -34,6 +36,7 @@ namespace FSM
         public override void Exit(BaseStateMachine machine)
         {
             base.Exit(machine);
+            Debug.Log("Вышел из " + machine.CurrentState);
             foreach (var activity in activities)
             {
                 activity.Exit(machine);
