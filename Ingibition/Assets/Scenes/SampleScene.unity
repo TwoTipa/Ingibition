@@ -1529,10 +1529,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6784171397494620855, guid: e757be79088d16247893eef006a22711, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784171397494620855, guid: e757be79088d16247893eef006a22711, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6784171398779831740, guid: e757be79088d16247893eef006a22711, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1242172117}
+    - target: {fileID: 6784171398779831743, guid: e757be79088d16247893eef006a22711, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784171398779831743, guid: e757be79088d16247893eef006a22711, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8492998564041511453, guid: e757be79088d16247893eef006a22711, type: 3}
       propertyPath: m_Name
       value: PlayerCamera
@@ -1546,6 +1562,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8900926893004683072, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
+      propertyPath: attackKey
+      value: 323
+      objectReference: {fileID: 0}
     - target: {fileID: 8900926893004683074, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1592,6 +1612,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8900926893004683075, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900926894106948364, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 67f32010b139882449f0b1c328ed899e, type: 3}
+    - target: {fileID: 8900926894106948364, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900926894106948364, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900926894106948364, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900926894106948367, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900926894106948367, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900926894106948367, guid: 2c089b98dab03324fb26f8e289494883, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

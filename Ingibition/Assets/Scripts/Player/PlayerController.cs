@@ -8,11 +8,13 @@ namespace Player
     {
         [SerializeField] private KeyCode dashKey;
         [SerializeField] private KeyCode useKey;
+        [SerializeField] private KeyCode attackKey;
 
         private PlayerEnergy _energy;
         private PlayerInteraction _interaction;
         private PlayerMove _move;
         private PlayerDash _dash;
+        private PlayerAnimator _animator;
 
         private void Awake()
         {
@@ -20,6 +22,7 @@ namespace Player
             _dash = GetComponent<PlayerDash>();
             _energy = GetComponent<PlayerEnergy>();
             _interaction = GetComponent<PlayerInteraction>();
+            _animator = GetComponent<PlayerAnimator>();
         }
 
         private void Update()
@@ -36,6 +39,10 @@ namespace Player
             if (Input.GetKeyDown(useKey))
             {
                 _interaction.TryUse();
+            }
+            if (Input.GetKeyDown(attackKey))
+            {
+                _animator.StartAttack();
             }
         }
     }

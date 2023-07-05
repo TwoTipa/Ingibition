@@ -46,10 +46,7 @@ public class DamageZone : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Damage(10);
-        }
+
     }
 
     private void OnDrawGizmosSelected()
